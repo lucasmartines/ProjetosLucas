@@ -24,7 +24,7 @@ public class ButtonEventsMenuController : MonoBehaviour {
 	
 	void Update () {
 	    
-        if( Input.GetKeyDown( keycode ) || Input.GetButtonDown("Cancel")){
+		if( Input.GetKeyDown( keycode ) || Input.GetButtonDown("Confirm") || Input.GetButtonDown("Submit")){
                 evento();
             }
 	}

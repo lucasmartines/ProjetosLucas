@@ -160,9 +160,11 @@ public class InputManager:MonoBehaviour  {
     {
 
         float vertical = 0.0f;
-      //  #if UNITY_STANDALONE_WIN || UNITY_WSA
-        vertical += Input.GetAxisRaw("J_MainVertical");
-     //  #endif
+		vertical += Input.GetAxisRaw("J_MainVertical");
+		#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+       
+		vertical += Input.GetAxisRaw("JX_MainVertical2");
+       #endif
         vertical += Input.GetAxisRaw("JX_MainVertical");
         vertical += Input.GetAxisRaw("K_MainVertical");
         vertical += VirtualJoystick.Vertical();
