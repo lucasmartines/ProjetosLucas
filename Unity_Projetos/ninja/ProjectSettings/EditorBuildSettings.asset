@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/StartUp.unity
+    guid: 0d3bc6249b3646e458da97445cf502d6
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/MenuModule/MainMenu.unity
+    guid: 37d35e3a70b44884f9f910b9d804e69f
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/credits/Credits.unity
+    guid: 8b22c197e009736429da7c56487ba625
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Map/MapMenu.unity
+    guid: 3b06b3927d69a7d4590aa643dc5a6b7b
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Intro/EngineBrand.unity
+    guid: c83014043a61eea46ac23627807e9425
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Intro/enterpriseBrand.unity
+    guid: 060548534b41d134bbe707b673ab1475
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Intro/fatecBrand.unity
+    guid: 5d245d91544d5b24da7ae6ac3e2100e1
+  - enabled: 1
+    path: Assets/NinjaNewOrder/Trash/trash/faze1.unity
+    guid: 2ad15f2d8fc8a404083b1ed968958049
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/LoadSave/LoadSave.unity
+    guid: 76e638f51be81cf45a6f993788b810d6
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Options/Options.unity
+    guid: 1ed09d4595c70744989321c66713d5d2
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/StartMenu(Legado)/StartMenu.unity
+    guid: a5429627009606b4bb65c1c366e9b0ef
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/Instructions/Instructions.unity
+    guid: 5e1ac94747f2abb458d8efcf7fe1fc70
+  - enabled: 1
+    path: Assets/NinjaNewOrder/scenes/gamePlay/FazeA/faze01.unity
+    guid: 4db757a8cf7580e439e91a8c95ad3263
