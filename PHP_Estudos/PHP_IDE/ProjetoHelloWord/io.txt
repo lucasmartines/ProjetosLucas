@@ -1,0 +1,20 @@
+Olá Bem vindo:
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Oi</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 10:22:10 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Tudo bem???</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 10:22:26 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Olllaaaaaaaaaaaaaa</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 10:24:31 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: aaaaaaaaaaaaaaaaaaaaaaaaaaaammmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 10:24:49 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Test</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:28:31 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: F1</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:29:11 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Igor</span> Message: Navbar</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:33:27 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Oi Mundo</span> Message: Bar nav</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:33:36 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Oi Mundo</span> Message: Lucas</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:36:30 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Oi Mundo</span> Message: Wall</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:37:21 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Igor</span> Message: Lol</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:37:29 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Igor</span> Message: Navbar</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:37:38 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Tt</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:50:11 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Nossa</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:50:55 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Ieaaaaahhhhh</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:51:18 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Testando123</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:55:36 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Ouiii</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:55:44 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Lucas</span> Message: Olha meu chat</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:56:27 PM</p></div>
+<div class="message"> <p>  <span style="color:blue"> N: Vitor</span> Message: Eu ser preguiçoso</p><p style="font-size:8px;"> Horario:Friday 31st of August 2018 05:59:47 PM</p></div>

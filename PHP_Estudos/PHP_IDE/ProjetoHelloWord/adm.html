@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title> Meu Projeto</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+        <script src="main.js"> </script>
+        <style>
+            #showData{
+                width:600px;
+                
+                overflow:scroll;
+                border: 1px #777 solid;
+            }
+            table , td ,th {
+                border: 1px #ddd solid;
+                border-collapse:collapse;
+                
+            }
+            td , th{
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="height:300px;overflow:scroll"> 
+            <table id="showData"></table>
+         </div>
+       <!-- <form method="get" > -->
+            Nome <input id="nome" type="text" name="nome" > <br>
+            Descrição <input id="descricao" type="text" name="descricao" ><br>
+            <button id="insert" name="action" value="insert"> Insert </button>
+             <button id="show" > Show </button>
+             <button id="destroy" name="action" value="reset"> Reset </button>
+                          <button id="pop" name="action" value="reset"> Pop </button>
+
+             <hr>
+             Delete by ID <input id="delete_number" value="0"/> <button id="delete" name="action" value="delete"> Delete </button>
+       <!-- </form> -->
+        
+    </body>
+</html>
