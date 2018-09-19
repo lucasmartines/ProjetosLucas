@@ -1,0 +1,266 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Jogo simples</title>
+</head>
+<body>
+    
+<canvas id="canvas" width='400' height='400'>
+    You Browser does not suport canvas please update to a modern browser
+    like google chorome or firefox.
+</canvas>
+<script>
+    /*RECANGLE OF GAME BOARD*/rect =20;
+
+    /*DEFINE CONTROLLERS*/var left = false,right = true,up = false ,down = false;
+    /*DEFINE VELOCITY   */var vel = {x:1,y:1};
+    /* DEFINE COBRA HEAD*/var snakeHead = {x:0,y:0,sx:20,sy:20}
+    /*DEFINE FRUIT*/var fruit = { x: Math.floor( Math.random() ) * rect  , y: Math.floor( Math.random() ) * rect ,sx:20,sy:20}
+    /*DEFINE TAIL*/
+    var hitYourself = false;
+    tails = [];
+    old = { left:false,right:false,top:false,down:false }
+
+    tailStart = 3;
+    tailQuantity = tailStart;
+    TailConterOfPrintedElements = 0;
+
+
+    // GET CANVAS
+    var canvas = document.getElementById('cobrinha');
+    ctx = canvas.getContext('2d');
+    
+
+
+    // GET CONTROLLER INPUT
+    document.addEventListener('keydown',function(event){
+
+        switch(event.keyCode){
+
+            
+            case 65:// left A
+            
+                left = true;
+                if(right == true){// if i an going to right so dont let me go to left
+                    left = false;// 
+                }
+                else{//right == false
+                    right= false;
+                }
+                up   = false;
+                down = false;
+              
+                break;
+            case 68://right d
+                right= true;
+                if(left == true){// if i an going to left so dont let me go to right
+                    right = false;
+                }
+                else{// left == false
+                    left = false;
+                }
+                    
+                up   = false;
+                down = false;
+                
+                break;
+            case 87://up w
+                up   = true;
+                if( down == true){// if i an going to down so dont let me go to up
+                    up = false;
+                }
+                else{ // down == false
+                    down = false;
+                    
+                }   
+                left = false;
+                right= false;
+              
+                break;
+            case 83:// down s 
+                down  = true;
+                if(up == true){// if i an going to up so dont let me go to down
+                    down = false;
+                }
+                else{// up == false
+                    up    = false;
+                }
+                left  = false;
+                right = false;
+               
+                break;
+        }
+
+    })
+ 
+    
+function logic(){
+    
+    /*dont shift tails if the you dont print all tails*/
+    /*tails is less than tail quantity  that represent actual quantity of tail*/
+    if(TailConterOfPrintedElements < tailQuantity){
+        TailConterOfPrintedElements ++;
+    }
+    else{// just remove last element when we have all the tails
+        tails.shift(); 
+    }
+
+
+    // COMANDS
+    if(left == true && right == false  /* && old._right == false*/) {
+        snakeHead.x += -vel.x;
+    }
+    if(right == true && left == false /* && old.left == false*/) {
+        snakeHead.x += vel.x;
+    }
+    if(up == true && down == false)  /* && old.up == false*/{
+        snakeHead.y += -vel.y;
+    }
+    if(down == true && up == false /* && old.down == false*/) {
+        snakeHead.y += vel.y;
+    }
+
+    // WHEN PLAYER ARRIVE IN BORDERS
+    if( snakeHead.x  * rect  > canvas.clientWidth - snakeHead.sx){//RIGHT BORDER X
+        snakeHead.x = 0;
+    }
+    if(  snakeHead.x * rect  < 0 ){//LEFT BORDER
+
+        snakeHead.x = canvas.clientWidth / rect;
+    }
+    if(  snakeHead.y * rect   > canvas.clientHeight - snakeHead.sy ){//BORDER Y BOTTOM BORDER
+        snakeHead.y = 0;
+    }
+    if(snakeHead.y * rect  < 0 ){// TOP BORDER
+        snakeHead.y = canvas.clientHeight / rect;
+    }
+ 
+    /* if snake get fruit*/
+    if(snakeHead.x == fruit.x && snakeHead.y == fruit.y){
+
+        /*increment tail*/
+        tailQuantity++;
+        
+        var temp_x = 0;//Math.floor( Math.random() * 20  );
+        var temp_y = 0;//Math.floor( Math.random() * 20  ) ;
+                
+
+        temp_x = Math.floor( Math.random() * 20  );
+        temp_y = Math.floor( Math.random() * 20  ) ;
+
+     
+        fruit.x = temp_x;
+        fruit.y = temp_y ;
+            
+
+        
+
+
+     //   fruit.y = fruit.y > 10 ? rect : fruit.y;
+
+
+        console.log("i get fruit",fruit);
+    }
+    /*check If snake hit yourself*/
+      /*FILL TAIL*/
+      for( c = 0 ; c < tails.length ; c++ ){
+        
+        if(snakeHead.x == tails[c].x && snakeHead.y == tails[c].y){
+            
+            left = right = up = down = false;
+            hitYourself = true;
+            tails = [];
+        }
+
+
+    }
+    // restart game 
+    if( left == true || right == true || up == true || down == true){
+        hitYourself = false;
+    }
+}
+function draw(){
+
+    ctx.font = "25px arial ";
+    
+    /*FILL BOARD*/
+    ctx.fillStyle="#ddd";
+    ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight);
+    
+
+
+    /* FILL COBRA*/
+    ctx.fillStyle="green";
+    ctx.fillRect(snakeHead.x*rect,snakeHead.y*rect,snakeHead.sx,snakeHead.sy);
+
+    /*FILL TAIL*/
+    for( c = 0 ; c < tails.length ; c++ ){
+        
+        ctx.fillStyle="green";
+        px = tails[c].x * rect;
+        py = tails[c].y * rect;
+        sx = tails[c].sx ;
+        sy = tails[c].sy ;
+        
+        ctx.fillRect(  px ,py,sx,sy );
+    }
+
+         //   console.log(fruit);
+    //PRINT FRUIT
+    ctx.fillStyle = "red";
+    ctx.fillRect( fruit.x *rect , fruit.y *rect , fruit.sx , fruit.sy );
+
+    // PRINT TEXT
+    ctx.fillStyle="pink";
+    ctx.fillText(" x = " + snakeHead.x + " y = " + snakeHead.y , 30,30);
+
+    // if i hit myself i lost so print text
+    /*RESET GAME*/
+    if( hitYourself )
+    {
+        ctx.fillStyle = "red";
+        ctx.font = "30px arial ";
+        var Lost = "Your Lost";
+
+
+        var widthText = ctx.measureText(Lost).width;
+      //  var heightText = ctx.measureText(Lost).height;
+
+        ctx.fillText(Lost , 200 - ( widthText / 2 ) ,200  );
+
+        // reset game rules
+        tailQuantity = tailStart;
+        TailConterOfPrintedElements = 0;
+        
+    }
+}
+function preUpdate(){
+    snakeHeadOld = snakeHead;
+
+}
+function update(){
+
+
+   // preUpdate();
+    var x = { x:snakeHead.x, y:snakeHead.y, sx:snakeHead.sx , sy: snakeHead.sy}
+
+    tails.push( x );
+
+    logic();
+    draw();
+
+
+    //window.requestAnimationFrame(update);
+
+}
+
+
+ //  console.log(tails);
+
+   setInterval(update,1000/10);     
+
+
+</script>
+    
+</body>
+</html>
